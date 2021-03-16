@@ -18,7 +18,7 @@
     background: linear-gradient(45deg, rgb(255, 196, 4), rgb(124, 63, 124));
 }
 .btn-dark, .bg-dark {
-    background: linear-gradient(45deg, rgb(15, 15, 15),rgb(44, 59, 73));
+    background: linear-gradient(45deg, rgb(44, 65, 77),rgb(107, 170, 230));
 }
 .btn-light, .bg-light {
     background: white
