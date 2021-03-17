@@ -1,0 +1,19 @@
+{
+  "name": "00_express_server",
+  "version": "1.0.0",
+  "description": "REST API with AJAX on Express server",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "VENKATA REDDY CHINNAPAREDDY",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
