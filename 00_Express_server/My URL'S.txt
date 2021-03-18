@@ -1,1 +1,10 @@
-http://127.0.0.1:3000/api/employees
+Employee portal application
+---------------------------------
+
+GET -->  http://127.0.0.1:3000/api/employees                 //  Getting data from server to client
+
+POST  -->   http://127.0.0.1:3000/api/employees/            //  Sending data from client to server
+
+PUT  -->   http://127.0.0.1:3000/api/employees/:id         //  Updating data in the server
+
+DELETE  -->  http://127.0.0.1:3000/api/employees/:id      //  Delete the data 
