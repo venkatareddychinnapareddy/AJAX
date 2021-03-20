@@ -29,3 +29,59 @@ let fetchEmployees = () => {
     document.querySelector('#table-body').innerHTML = tableRows;
   });
 };
+
+//POST Button 
+  let postButton = document.querySelector('#post-btn');
+  postButton.addEventListener('click',() => {
+    
+    let url = `${serverURL}/employees`;
+    let employee = {
+        first_name : "Maldives",
+        last_name : "Dine",
+        email : "Malik@gmail.com",
+        gender : 'Male',
+        ip_address : '127.10.20.000'
+    }
+
+    let http = new BrainHttp();
+    http.post(url , employee , (data) => {
+        alert(JSON.stringify(data));
+        fetchEmployees();
+    });
+  });
+
+  //PUT button 
+  let putButton = document.querySelector('#put-btn');
+  putButton.addEventListener('click', () => {
+
+    let empId = `VLITS12345`;
+    let employee = {
+      id : empId,
+      first_name : 'Venkata reddy',
+      last_name : 'chinnapareddy',
+      email : 'chinnapareddy@ch.com',
+      gender : 'Male',
+      ip_address : '127.97.52.92'
+    };
+
+    let url = `${serverURL}/employees/${empId}`;
+    let http = new BrainHttp();
+    http.put(url , employee , (data) => {
+      alert(JSON.stringify(data));
+      fetchEmployees();
+    });
+  });
+
+  //DELETE Button 
+let deleteButton = document.querySelector('#delete-btn');
+deleteButton.addEventListener('click' , () => {
+
+  let employeeId = `VLITS10790`;
+
+  let url = `${serverURL}/employees/${employeeId}`;
+  let http = new BrainHttp();
+  http.delete(url , (data) => {
+    alert(JSON.stringify(data));
+    fetchEmployees();
+  });
+});
