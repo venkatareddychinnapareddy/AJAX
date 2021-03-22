@@ -12,7 +12,7 @@
    background: linear-gradient(45deg, rgb(12, 241, 241), rgb(118, 231, 12));
 }
 .btn-danger, .bg-danger {
-    background: linear-gradient(45deg, rgb(235, 113, 13), rgb(197, 12, 12));
+    background: linear-gradient(45deg, rgb(235, 113, 13), rgb(255, 5, 5));
 }
 .btn-warning, .bg-warning {
     background: linear-gradient(45deg, rgb(255, 196, 4), rgb(124, 63, 124));
@@ -21,14 +21,14 @@
     background: linear-gradient(45deg, rgb(44, 65, 77),rgb(107, 170, 230));
 }
 .btn-light, .bg-light {
-    background: white
+    background: rgb(173, 180, 184) !important;
 }
 
  .bg-teal , .btn-teal{
- background: #236666; !important;
+ background: #236666 !important;
 }
 .text-teal{
-    color: #236666; !important;
+    color: #236666 !important;
 }
  .carousel .carousel-indicators li {
      width: 30px;
