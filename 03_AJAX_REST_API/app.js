@@ -16,7 +16,7 @@ let fetchEmployees = () => {
   http.get(url , (error , employees) => {
       if (error) throw error;
       let tableRows = '';
-      for(let employee of employees) {
+      for(let employee of employees) {  
         tableRows += `<tr>
                           <td>${employee.id}</td>
                           <td>${employee.first_name}</td>
@@ -76,7 +76,7 @@ let fetchEmployees = () => {
 let deleteButton = document.querySelector('#delete-btn');
 deleteButton.addEventListener('click' , () => {
 
-  let employeeId = `VLITS10790`;
+  let employeeId = `VLITS13174`;
 
   let url = `${serverURL}/employees/${employeeId}`;
   let http = new BrainHttp();

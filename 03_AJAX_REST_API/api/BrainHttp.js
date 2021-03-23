@@ -5,10 +5,10 @@ export class BrainHttp {
 
   // GET Request
    get = (url , callback) => {
-       this.http.open('GET', url, true);
+       this.http.open('GET', url , true);
        this.http.send();
        this.http.onload = () => {
-            if (this.http.status === 200) {
+            if(this.http.status === 200) {
                 let data = this.http.responseText;
                 let employees = JSON.parse(data);
                 callback(null,employees);
