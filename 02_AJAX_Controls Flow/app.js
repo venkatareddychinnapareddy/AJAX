@@ -56,7 +56,7 @@ jsonButton.addEventListener('click',function(){
 
 let jsonData = (data) => {
     let htmlTemplate = `<ul class="list-group">
-                            <li class="list-group-item">Employee Name :${data.Employee}</li>
+                            <li class="list-group-item">Employee Name :${data.Name}</li>
                             <li class="list-group-item">Employee Id :${data.Id}</li>
                             <li class="list-group-item">Designation :${data.Designation}</li>
                             <li class="list-group-item">Branch :${data.Branch}</li>
