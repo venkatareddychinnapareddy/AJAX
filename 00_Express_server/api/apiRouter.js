@@ -8,18 +8,18 @@ let employees = [
     id: "VLITS12345",
     first_name: "John",
     last_name: "Smith",
-    gender: "Male",
     email: "johnsmith@gmail.com",
-    ip_address: "127.0.0.1",
+    gender: "Male",
+    ip_address: "127.0.0.1"
   },
   {
     id: "VLITS56978",
     first_name: "Laura",
     last_name: "Williams",
-    gender: "Female",
     email: "laurawilliams@gmail.com",
-    ip_address: "9845.56.32",
-  },
+    gender: "Female",
+    ip_address: "128.306.90"
+  }
 ];
 
 //GET - Employees
@@ -29,18 +29,18 @@ router.get("/employees", (request, response) => {
 
 //GET ID
 let getID = () => {
-  return "VLITS" + Math.random().toString().substr(2, 9);
+  return "VLITS" + Math.random().toString().substr(2,5);
 };
 
 //post Request
 router.post("/employees", (request, response) => {
   let employee = {
     id: getID(),
-    first_name: request.body.first_name,
-    last_name: request.body.last_name,
-    gender: request.body.gender,
-    email: request.body.email,
-    ip_address: request.body.ip_address,
+   first_name : request.body.first_name,
+   last_name : request.body.last_name,
+   email : request.body.email,
+   gender : request.body.gender,
+   ip_address : request.body.ip_address
   };
   employees.push(employee);
   console.log(
@@ -56,8 +56,8 @@ router.put("/employees/:id", (request, response) => {
     id: empId,
     first_name: request.body.first_name,
     last_name: request.body.last_name,
-    gender: request.body.gender,
     email: request.body.email,
+    gender: request.body.gender,
     ip_address: request.body.ip_address,
   };
   let existingEmployee = employees.find((employee) => {

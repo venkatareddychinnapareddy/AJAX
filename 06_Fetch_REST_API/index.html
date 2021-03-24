@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="../Bootstrap/css/font-awesome-5.8.1.css">
+<link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../Bootstrap/css/mdb.css">
+<link rel="stylesheet" href="../Bootstrap/css/style.css"> 
+<title>Fetch REST API</title>
+</head>
+
+<body>
+
+
+        <nav class="navbar navbar-dark bg-dark">
+        <a href="" class="navbar-brand">Fetch REST API</a>     
+        </nav>
+
+        <!-- Buttons section -->
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary" id="get-btn">GET</button>
+                    <button class="btn btn-secondary" id="post-btn">POST</button>
+                    <button class="btn btn-success" id="put-btn">PUT / UPDATE</button>
+                    <button class="btn btn-danger" id="delete-btn">DELETE</button>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Table Section -->
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover table-bordered table-striped text-center table-primary">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>EMP ID</th>
+                            <th>FIRST NAME</th>
+                            <th>LAST NAME</th>
+                            <th>EMAIL</th>
+                            <th>GENDER</th>
+                            <th>IP ADDRESS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-dark text-white" id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="../Bootstrap/js/jQuery-3.5.1.min.js"></script>
+<script src="../Bootstrap/js/bootstrap.min.js"></script>
+<script src="../Bootstrap/js/popper.min.js"></script>
+<script src="../Bootstrap/js/mdb.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+
+</html>

@@ -12,9 +12,9 @@ const port = 3000;
 
 //configure body-parser
 const jsonParser = bodyParser.json();
-const urlEncodedParser = bodyParser.urlencoded({extended : false})
-app.use(jsonParser)
-app.use(urlEncodedParser)
+const urlEncodedParser = bodyParser.urlencoded({extended : false});
+app.use(jsonParser);
+app.use(urlEncodedParser);
 
 //configure cors
 app.use(cors());
