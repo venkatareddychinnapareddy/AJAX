@@ -32,20 +32,55 @@ let fetchEmployees = () => {
 
 //Post Button
 let postButton = document.querySelector('#post-btn');
-postButton.addEventListener('click', () => {
+postButton.addEventListener('click', function () {
 
   let url = `${serverURL}/employees`;
     let newEmployee = {
-        first_name : "Maldives",
-        last_name : "Dine",
-        email : "Malik@gmail.com",
+        first_name : "Kevin",
+        last_name : "william",
+        email : "Kevin@gmail.com",
         gender : "Male",
-        ip_address : "127.10.20.000"
+        ip_address : "127.10.10.80"
     };
   BrainHttp.post(url , newEmployee).then((data) => {
     console.log(data);
     fetchEmployees();
-  }).catch((error) => {
-    console.error(error);
+  }).catch((err) => {
+    console.error(err);
+  });
+});
+
+//PUT Button
+let putButton = document.querySelector('#put-btn');
+putButton.addEventListener('click', () => {
+
+  let employeeID = 'VLITS31781';
+  let url = `${serverURL}/employees/${employeeID}`;
+  let updateEmployee = {
+        first_name : "Anjali",
+        last_name : "lara",
+        email : "Anu@gmail.com",
+        gender : "Female",
+        ip_address : "127.10.10.100"
+  };
+  BrainHttp.put(url , updateEmployee).then((data) => {
+    console.log(data);
+    fetchEmployees();
+  }).catch((err) => {
+    console.error(err);
+  });
+});
+
+//Delete button
+let deleteButton = document.querySelector('#delete-btn');
+deleteButton.addEventListener('click', () => {
+
+  let employeeID = 'VLITS28216';
+  let url = `${serverURL}/employees/${employeeID}`;
+  BrainHttp.delete(url).then((data) => {
+    console.log(data);
+    fetchEmployees();
+  }).catch((err) => {
+    console.error(err);
   });
 });
