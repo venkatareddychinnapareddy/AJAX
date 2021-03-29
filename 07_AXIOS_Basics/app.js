@@ -57,14 +57,11 @@ let fetchApiData = () => {
         let users = response.data;
         let userList = '';
         for(let user of users) {
-            userList += `<ul class="list-group mt-4">
+            userList += `<ul class="list-group mt-2">
                                 <li class="list-group-item">ID : ${user.id}</li>
                                 <li class="list-group-item">Name : ${user.name}</li>
-                                <li class="list-group-item">Username : ${user.username}</li>
                                 <li class="list-group-item">Email : ${user.email}</li>
-                                <li class="list-group-item">Street : ${user.address.street}</li>
                                 <li class="list-group-item">City : ${user.address.city}</li>
-                                <li class="list-group-item">PIN : ${user.address.zipcode}</li>
                          </ul>`;
         }
         document.querySelector('#api-card').innerHTML = userList;
